@@ -35,8 +35,8 @@ header.site {
   position: sticky; top: 0; z-index: 10;
   background: var(--bg); box-shadow: 0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line); clip-path: inset(0 -100vmax -1px);
 }
-header.site .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.01em; }
-header.site .brand img { width: 52px; height: 52px; }
+header.site .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); font-weight: 700; font-size: 1.75rem; letter-spacing: -0.01em; }
+header.site .brand img { width: 56px; height: 56px; }
 header.site nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
 header.site nav a { color: var(--muted); }
 header.site nav a.current { color: var(--fg); }
@@ -88,7 +88,7 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; text-align: 
 /* Phone: a more compact sticky header */
 @media (max-width: 640px) {
   header.site { padding-top: 10px; padding-bottom: 10px; }
-  header.site .brand { font-size: 1.25rem; }
-  header.site .brand img { width: 40px; height: 40px; }
+  header.site .brand { font-size: 1.5rem; }
+  header.site .brand img { width: 44px; height: 44px; }
   header.site nav { width: 100%; gap: 4px 14px; font-size: 15px; }
 }
