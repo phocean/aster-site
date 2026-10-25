@@ -30,10 +30,13 @@ a:hover { text-decoration: underline; }
 header.site, main, footer.site { max-width: 760px; margin: 0 auto; padding: 0 20px; }
 header.site {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 18px;
-  padding-top: 22px; padding-bottom: 22px;
+  padding-top: 14px; padding-bottom: 14px;
+  /* Stays at the top while scrolling: plain background to the window edges, a hairline below. */
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg); box-shadow: 0 0 0 100vmax var(--bg), 0 1px 0 100vmax var(--line); clip-path: inset(0 -100vmax -1px);
 }
-header.site .brand { display: flex; align-items: center; gap: 10px; color: var(--fg); font-weight: 600; }
-header.site .brand img { width: 32px; height: 32px; }
+header.site .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.01em; }
+header.site .brand img { width: 52px; height: 52px; }
 header.site nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
 header.site nav a { color: var(--muted); }
 header.site nav a.current { color: var(--fg); }
@@ -81,3 +84,11 @@ figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; text-align: 
 /* Release notes */
 .release h2 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .release h2 small { color: var(--muted); font-size: 15px; font-weight: 400; }
+
+/* Phone: a more compact sticky header */
+@media (max-width: 640px) {
+  header.site { padding-top: 10px; padding-bottom: 10px; }
+  header.site .brand { font-size: 1.25rem; }
+  header.site .brand img { width: 40px; height: 40px; }
+  header.site nav { width: 100%; gap: 4px 14px; font-size: 15px; }
+}
